@@ -1,0 +1,68 @@
+*** Create Virtual Environment
+python -m venv .venv
+
+*** Activate Virtual Environment
+.venv\Scripts\Activate
+
+*** Install Django:
+pip install Django
+
+*** Create a new project called django_basics:
+django-admin startproject django_basics
+
+*** Change directory
+cd django_basics
+
+*** Migrate the database:
+python manage.py migrate
+
+*** Start the local server:
+python manage.py runserver 0.0.0.0:5001
+
+*** Access localhost:5001 on Internet Browser
+
+*** Stop Server by Ctrl+C
+
+*** Create an app
+python manage.py startapp pages
+
+*** Django Project Changes ===>> add the new app 'pages' to INSTALLED_APPS in django_basics/settings.py
+
+*** Django Project Changes ===>> update the django_basics/urls.py file by importing include and adding a path for the pages app
+
+*** Django App Changes ===>> create pages/urls.py file within our pages app and define paths for home page, Page_1, Page_2, Page_3
+
+*** Django App Changes ===>> make changes in pages/views.py file within our pages app (define here classes & functions for home page, Page_1, Page_2 & Page_3)
+
+*** Django App Changes ===>> Create pages/templates/pages folders and create html files there for Page_1 & Page_2
+
+*** Django Project Changes ===>> update the django_basics/urls.py file by defining path for Page_4
+
+*** Django App Changes ===>> Inside pages/templates/pages folders, create html file for Page_4
+
+*** Start the local server:
+python manage.py runserver 0.0.0.0:5001
+
+*** Access pages on Internet Browser
+localhost:5001
+localhost:5001/Page_1
+localhost:5001/Page_2
+localhost:5001/Page_3
+localhost:5001/Page_4
+
+*** Create another app
+python manage.py startapp operations
+
+*** Django Project Changes ===>> add the new app 'operations' to INSTALLED_APPS in django_basics/settings.py
+
+*** Django Project Changes ===>> update the django_basics/urls.py file by adding a path for the operations app
+
+*** Django App Changes ===>> create operations/urls.py file within our operations app and define paths for Person_Info
+
+*** Django App Changes ===>> Create operations/templates/ folder and create html files there for Person_Info
+
+*** Start the local server:
+python manage.py runserver 0.0.0.0:5001
+
+*** Access pages on Internet Browser
+localhost:5001/Person_Info
